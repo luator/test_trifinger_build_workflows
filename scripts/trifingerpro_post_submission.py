@@ -24,7 +24,7 @@ from ament_index_python.packages import get_package_share_directory
 import tomli
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 import trifinger_object_tracking.py_tricamera_types as tricamera
 import trifinger_object_tracking.py_object_tracker as object_tracker
 from trifinger_cameras import utils
@@ -91,7 +91,7 @@ def load_object_type() -> typing.Optional[str]:
 
 
 def get_robot_config_without_position_limits() -> (
-    robot_fingers.TriFingerConfig
+    test_trifinger_build_workflows.TriFingerConfig
 ):
     """Get TriFingerPro configuration without position limits.
 
@@ -99,11 +99,11 @@ def get_robot_config_without_position_limits() -> (
     disables the position limits.
     """
     # get the path to the TriFingerPro config file
-    _, _, config_file = robot_fingers.robot.robot_configs["trifingerpro"]
-    config_file_path = robot_fingers.robot.get_config_dir() / config_file
+    _, _, config_file = test_trifinger_build_workflows.robot.robot_configs["trifingerpro"]
+    config_file_path = test_trifinger_build_workflows.robot.get_config_dir() / config_file
 
     # load the config
-    config = robot_fingers.TriFingerConfig.load_config(str(config_file_path))
+    config = test_trifinger_build_workflows.TriFingerConfig.load_config(str(config_file_path))
 
     # disable position limits
     n_joints = 9
@@ -115,7 +115,7 @@ def get_robot_config_without_position_limits() -> (
     return config
 
 
-def end_stop_check(robot: robot_fingers.Robot, log: logging.Logger) -> None:
+def end_stop_check(robot: test_trifinger_build_workflows.Robot, log: logging.Logger) -> None:
     """Move robot to endstop, using constant torque and verify its position.
 
     Applies a constant torque for a fixed time to move to the end-stop.  If
@@ -191,7 +191,7 @@ def end_stop_check(robot: robot_fingers.Robot, log: logging.Logger) -> None:
         sys.exit(1)
 
 
-def run_self_test(robot: robot_fingers.Robot, log: logging.Logger) -> None:
+def run_self_test(robot: test_trifinger_build_workflows.Robot, log: logging.Logger) -> None:
     position_tolerance = 0.2
     push_sensor_threshold = 0.5
 
@@ -284,7 +284,7 @@ def reset_object(robot, trajectory_file):
         trajectory_file: Path to a CSV file defining the trajectory.
     """
     trajectory_file = os.path.join(
-        get_package_share_directory("robot_fingers"),
+        get_package_share_directory("test_trifinger_build_workflows"),
         "config",
         trajectory_file,
     )
@@ -639,9 +639,9 @@ def main():
     if not args.skip_robot_test or args.reset:
         print("Initialise robot.")
         config = get_robot_config_without_position_limits()
-        robot = robot_fingers.Robot(
+        robot = test_trifinger_build_workflows.Robot(
             robot_interfaces.trifinger,
-            robot_fingers.create_trifinger_backend,
+            test_trifinger_build_workflows.create_trifinger_backend,
             config,
         )
         robot.initialize()

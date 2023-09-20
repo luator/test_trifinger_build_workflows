@@ -1,7 +1,7 @@
 .. image:: doc/images/trifingerpro_with_cube.jpg
    :align: center
 
-The ``robot_fingers`` package provides drivers, examples and basic scripts for
+The ``test_trifinger_build_workflows`` package provides drivers, examples and basic scripts for
 using the (Tri)Finger robots with our :doc:`robot_interfaces
 <robot_interfaces:index>` package.
 
@@ -22,10 +22,10 @@ software, see also our paper_ on the open-source version of the TriFinger robot.
    doc/hardware_testing.rst
 
 
-.. _GitHub: https://github.com/open-dynamic-robot-initiative/robot_fingers
-.. _Source Code: https://github.com/open-dynamic-robot-initiative/robot_fingers
-.. _Bug Tracker: https://github.com/open-dynamic-robot-initiative/robot_fingers/issues
+.. _GitHub: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows
+.. _Source Code: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows
+.. _Bug Tracker: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/issues
 .. _paper: https://arxiv.org/abs/2008.03596
-.. _Documentation: https://open-dynamic-robot-initiative.github.io/robot_fingers
+.. _Documentation: https://open-dynamic-robot-initiative.github.io/test_trifinger_build_workflows
 .. _robot_interfaces: https://open-dynamic-robot-initiative.github.io/robot_interfaces
 

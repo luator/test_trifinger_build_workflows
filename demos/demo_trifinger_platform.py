@@ -5,7 +5,7 @@ import argparse
 import numpy as np
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_target_joint_positions(t: int) -> np.ndarray:
@@ -48,9 +48,9 @@ def main() -> None:  # noqa[D103]
     args = parse_arguments()
 
     if args.with_object:
-        robot = robot_fingers.TriFingerPlatformWithObjectFrontend()
+        robot = test_trifinger_build_workflows.TriFingerPlatformWithObjectFrontend()
     else:
-        robot = robot_fingers.TriFingerPlatformFrontend()
+        robot = test_trifinger_build_workflows.TriFingerPlatformFrontend()
 
     t = 0
     while True:

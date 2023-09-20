@@ -8,7 +8,7 @@ import progressbar
 from ament_index_python.packages import get_package_share_directory
 
 from robot_interfaces import one_joint
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 N_JOINTS = 1
@@ -212,13 +212,13 @@ def main():
 
     # load the default config file
     config_file_path = path.join(
-        get_package_share_directory("robot_fingers"),
+        get_package_share_directory("test_trifinger_build_workflows"),
         "config",
         "onejoint_high_load.yaml",
     )
 
     robot_data = one_joint.SingleProcessData()
-    finger_backend = robot_fingers.create_one_joint_backend(
+    finger_backend = test_trifinger_build_workflows.create_one_joint_backend(
         robot_data, config_file_path
     )
     robot = one_joint.Frontend(robot_data)

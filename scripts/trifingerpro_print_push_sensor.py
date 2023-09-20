@@ -4,11 +4,11 @@
 Uses the "trifingerpro_calib" setup, so can safely be used for robots where the
 home-offsets are not yet configured.
 """
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
-    robot = robot_fingers.Robot.create_by_name("trifingerpro_calib")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro_calib")
     robot.initialize()
 
     action = robot.Action()

@@ -4,14 +4,14 @@ import argparse
 
 import pandas
 
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "robot_type",
-        choices=robot_fingers.Robot.get_supported_robots(),
+        choices=test_trifinger_build_workflows.Robot.get_supported_robots(),
         help="Name of the robot.",
     )
     parser.add_argument("logfile", type=str, help="Path to the log file.")
@@ -38,7 +38,7 @@ def main():
     print("Replay {} positions".format(num_positions))
 
     # initialize robot
-    robot = robot_fingers.Robot.create_by_name(args.robot_type)
+    robot = test_trifinger_build_workflows.Robot.create_by_name(args.robot_type)
     robot.initialize()
 
     # move robot to the recorded positions.  At speed = 1, every position is

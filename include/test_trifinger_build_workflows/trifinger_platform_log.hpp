@@ -11,7 +11,7 @@
 #include <trifinger_cameras/tricamera_observation.hpp>
 #include <trifinger_object_tracking/tricamera_object_observation.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 /**
  * @brief Load robot and camera log and match observations like during runtime.
@@ -194,4 +194,4 @@ typedef T_TriFingerPlatformLog<trifinger_cameras::TriCameraObservation>
 typedef T_TriFingerPlatformLog<
     trifinger_object_tracking::TriCameraObjectObservation>
     TriFingerPlatformWithObjectLog;
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

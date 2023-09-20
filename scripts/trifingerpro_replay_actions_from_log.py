@@ -7,7 +7,7 @@ import pathlib
 import sys
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
@@ -21,7 +21,7 @@ def main():
 
     log = robot_interfaces.trifinger.BinaryLogReader(str(args.log_file))
 
-    robot = robot_fingers.Robot.create_by_name("trifingerpro")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro")
     robot.initialize()
 
     for log_entry in log.data:

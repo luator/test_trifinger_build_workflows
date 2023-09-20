@@ -9,7 +9,7 @@
     template <typename Observation, size_t N_JOINTS, size_t N_MOTOR_BOARDS>
 #define NJBRD NJointBlmcRobotDriver<Observation, N_JOINTS, N_MOTOR_BOARDS>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 TPL_NJBRD
 bool NJBRD::Config::is_within_hard_position_limits(const Vector &position) const
@@ -899,4 +899,4 @@ auto SimpleNJointBlmcRobotDriver<N_JOINTS,
     return observation;
 }
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

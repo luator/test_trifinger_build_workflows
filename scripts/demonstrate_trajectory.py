@@ -3,7 +3,7 @@
 import argparse
 import curses
 
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 class SimpleCursesGUI:
@@ -79,7 +79,7 @@ def loop(win, args):
     title = "Demonstration Recorder"
     status_line = " q: quit | space: start/stop recording"
 
-    robot = robot_fingers.Robot.create_by_name(
+    robot = test_trifinger_build_workflows.Robot.create_by_name(
         args.robot_type, logger_buffer_size=300000
     )
     robot.initialize()
@@ -119,7 +119,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "robot_type",
-        choices=robot_fingers.Robot.get_supported_robots(),
+        choices=test_trifinger_build_workflows.Robot.get_supported_robots(),
         help="Name of the robot.",
     )
     parser.add_argument(

@@ -10,7 +10,7 @@
 
 #include <robot_interfaces/n_joint_robot_types.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 template <typename Driver>
 void bind_driver_config(pybind11::module &m, const std::string &name)
@@ -160,4 +160,4 @@ void bind_create_backend(pybind11::module &m, const std::string &name)
           pybind11::arg("max_number_of_actions") = 0);
 }
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

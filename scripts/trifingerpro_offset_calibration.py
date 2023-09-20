@@ -11,7 +11,7 @@ can directly be copied to the configuration file of the robot.
 """
 import numpy as np
 
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 # Distance from the zero position (finger pointing straight down) to the
@@ -26,7 +26,7 @@ _homing_torque = [+0.3, +0.3, -0.2] * 3
 
 
 def main():
-    robot = robot_fingers.Robot.create_by_name("trifingerpro_calib")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro_calib")
     robot.initialize()
 
     # move back to "homing" end-stop

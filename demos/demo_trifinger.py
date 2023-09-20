@@ -8,7 +8,7 @@ import argparse
 import numpy as np
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def run_choreography(frontend):
@@ -40,7 +40,7 @@ def run_choreography(frontend):
     pose_side_2 = pose_idle
     pose_side_3 = [deg45, -deg22, -deg45]
 
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     while True:
         # initial pose
@@ -87,9 +87,9 @@ def main():
     else:
         # In single-process case run both frontend and backend in this process
         # (using the `Robot` helper class).
-        robot = robot_fingers.Robot(
+        robot = test_trifinger_build_workflows.Robot(
             robot_interfaces.trifinger,
-            robot_fingers.create_trifinger_backend,
+            test_trifinger_build_workflows.create_trifinger_backend,
             "trifinger.yml",
         )
         robot.initialize()

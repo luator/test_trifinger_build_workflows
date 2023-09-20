@@ -3,12 +3,12 @@
 import numpy as np
 
 from robot_interfaces import finger
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
     finger_data = finger.SingleProcessData()
-    finger_backend = robot_fingers.create_fake_finger_backend(finger_data)
+    finger_backend = test_trifinger_build_workflows.create_fake_finger_backend(finger_data)
     finger_frontend = finger.Frontend(finger_data)
 
     desired_torque = np.zeros(3)

@@ -10,7 +10,7 @@ import argparse
 import numpy as np
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_random_position():
@@ -37,7 +37,7 @@ def initialize(frontend):
 
 
 def move_with_random_positions():
-    robot = robot_fingers.Robot.create_by_name("fingerpro")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("fingerpro")
     robot.initialize()
 
     # first move to zero position, so it is easy to detect if there is some
@@ -47,7 +47,7 @@ def move_with_random_positions():
     limit_low = robot.config.soft_position_limits_lower
     limit_up = robot.config.soft_position_limits_upper
 
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     while True:
         # get random position within the robot's valid range
@@ -171,11 +171,11 @@ def move_on_full_range(push_interval):
         robot_type,
         backend_func,
         config_file,
-    ) = robot_fingers.robot.robot_configs["fingerpro"]
-    config_file_path = robot_fingers.robot.get_config_dir() / config_file
+    ) = test_trifinger_build_workflows.robot.robot_configs["fingerpro"]
+    config_file_path = test_trifinger_build_workflows.robot.get_config_dir() / config_file
 
     n_joints = 3
-    config = robot_fingers.FingerConfig.load_config(str(config_file_path))
+    config = test_trifinger_build_workflows.FingerConfig.load_config(str(config_file_path))
 
     # disable position limits
     config.hard_position_limits_lower = [-np.inf] * n_joints
@@ -184,7 +184,7 @@ def move_on_full_range(push_interval):
     config.soft_position_limits_upper = [np.inf] * n_joints
 
     robot_data = robot_interfaces.finger.SingleProcessData()
-    robot_backend = robot_fingers.create_real_finger_backend(
+    robot_backend = test_trifinger_build_workflows.create_real_finger_backend(
         robot_data, config
     )
     robot_frontend = robot_interfaces.finger.Frontend(robot_data)
@@ -193,7 +193,7 @@ def move_on_full_range(push_interval):
 
     initialize(robot_frontend)
 
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     i = 0
     while True:

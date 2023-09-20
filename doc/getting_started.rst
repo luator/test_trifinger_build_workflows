@@ -11,15 +11,15 @@ We provide several demos_ to show how to use the interface on practical
 examples.  Good starting points are:
 
 - `demo_fake_finger
-  <https://github.com/open-dynamic-robot-initiative/robot_fingers/blob/master/demos/demo_fake_finger.py>`_
+  <https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/blob/master/demos/demo_fake_finger.py>`_
   Basic example using a fake robot (i.e. not real robot involved).  Mostly
   useful for testing if the package was installed correctly.
-- `demo_single_finger_torque_control <https://github.com/open-dynamic-robot-initiative/robot_fingers/blob/master/demos/demo_single_finger_torque_control.py>`_:
+- `demo_single_finger_torque_control <https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/blob/master/demos/demo_single_finger_torque_control.py>`_:
   Basic example on how to control the robot using torque commands.  This uses
   only a single finger but the principle is the same for the TriFinger.
-- `demo_single_finger_position_control <https://github.com/open-dynamic-robot-initiative/robot_fingers/blob/master/demos/demo_single_finger_position_control.py>`_:
+- `demo_single_finger_position_control <https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/blob/master/demos/demo_single_finger_position_control.py>`_:
   Same as above but using position commands instead of torque commands.
-- `demo_trifinger <https://github.com/open-dynamic-robot-initiative/robot_fingers/blob/master/demos/demo_trifinger.py>`_:
+- `demo_trifinger <https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/blob/master/demos/demo_trifinger.py>`_:
   Demo for the TriFinger, moving it in a hard-coded choreography.
 
 .. note::
@@ -38,10 +38,10 @@ demos as follows:
     $ singularity shell -e --no-home --bind=$(pwd) path/to/image.sif
     Singularity> source /setup.bash
     Singularity> source ./install/local_setup.bash
-    Singularity> ros2 run robot_fingers demo_single_finger_torque_control
+    Singularity> ros2 run test_trifinger_build_workflows demo_single_finger_torque_control
 
 Instead of using ``ros2 run`` you can also call the corresponding Python scripts
 directly.
 
 
-.. _demos: https://github.com/open-dynamic-robot-initiative/robot_fingers/blob/master/demos
+.. _demos: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/blob/master/demos

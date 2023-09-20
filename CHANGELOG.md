@@ -32,7 +32,7 @@
 - Update configuration for `single_finger_test` to work with current software
   version.
 - Install the interface library, so other packages can link to
-  `robot_fingers::robot_fingers`.
+  `test_trifinger_build_workflows::test_trifinger_build_workflows`.
 - Logger initialisation in `trifinger_backend`.
 - `trifinger_backend`: Use proper timeseries history length if no limit for
   number of actions is specified.
@@ -66,6 +66,6 @@
 There is no changelog for this or earlier versions.
 
 
-[Unreleased]: https://github.com/open-dynamic-robot-initiative/robot_fingers/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/open-dynamic-robot-initiative/robot_fingers/compare/v0.3.0...v1.0.0
-[0.3.0]: https://github.com/open-dynamic-robot-initiative/robot_fingers/releases/tag/v0.3.0
+[Unreleased]: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/compare/v0.3.0...v1.0.0
+[0.3.0]: https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows/releases/tag/v0.3.0

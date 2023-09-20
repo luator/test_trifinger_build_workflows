@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(robot_fingers)
+project(test_trifinger_build_workflows)
 
 # Specify C++ Standard
 set(CMAKE_CXX_STANDARD 17)

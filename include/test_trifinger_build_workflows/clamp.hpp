@@ -4,7 +4,7 @@
  */
 #pragma once
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 /**
  * @brief Clamp an arbitrary Eigen vector.
@@ -24,4 +24,4 @@ Vector clamp(const Vector &vector,
     return vector.cwiseMin(upper_limit).cwiseMax(lower_limit);
 }
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

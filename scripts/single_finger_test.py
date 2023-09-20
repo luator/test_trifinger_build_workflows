@@ -7,7 +7,7 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 
 from robot_interfaces import finger
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 class CursesGUI:
@@ -245,11 +245,11 @@ def main():
     else:
         # load the default config file
         config_file_path = os.path.join(
-            get_package_share_directory("robot_fingers"),
+            get_package_share_directory("test_trifinger_build_workflows"),
             "config",
             "single_finger_test.yml",
         )
-        backend = robot_fingers.create_real_finger_backend(
+        backend = test_trifinger_build_workflows.create_real_finger_backend(
             robot_data, config_file_path
         )
 

@@ -9,7 +9,7 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 import pinocchio
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_random_position():
@@ -43,9 +43,9 @@ if __name__ == "__main__":
     data = model.createData()
     tip_link_id = model.getFrameId("finger_tip_link")
 
-    robot = robot_fingers.Robot(
+    robot = test_trifinger_build_workflows.Robot(
         robot_interfaces.finger,
-        robot_fingers.create_real_finger_backend,
+        test_trifinger_build_workflows.create_real_finger_backend,
         "finger.yml",
     )
     robot.initialize()

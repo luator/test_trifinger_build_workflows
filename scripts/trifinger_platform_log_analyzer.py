@@ -4,7 +4,7 @@ import argparse
 
 import matplotlib.pyplot as plt
 
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     parser.add_argument("camera_log", type=str, help="Camera log file")
     args = parser.parse_args()
 
-    log = robot_fingers.TriFingerPlatformLog(args.robot_log, args.camera_log)
+    log = test_trifinger_build_workflows.TriFingerPlatformLog(args.robot_log, args.camera_log)
 
     robot_timestamps_ms = []
     camera_timestamps_ms = []

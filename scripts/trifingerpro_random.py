@@ -2,7 +2,7 @@
 """Move TriFingerPro to random positions (with collisions)."""
 import numpy as np
 
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_random_position():
@@ -17,10 +17,10 @@ def get_random_position():
 
 
 def main():
-    robot = robot_fingers.Robot.create_by_name("trifingerpro")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro")
     robot.initialize()
 
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     while True:
         action = robot.Action(position=get_random_position())

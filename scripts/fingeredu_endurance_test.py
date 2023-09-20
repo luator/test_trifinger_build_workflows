@@ -9,7 +9,7 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_random_position():
@@ -24,7 +24,7 @@ def get_random_position():
 
 def demo_position_commands(finger):
     """Demo for directly sending position commands."""
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     while True:
         # Run a position controller that randomly changes the desired position
@@ -52,11 +52,11 @@ def main():
     )
 
     config_file_path = os.path.join(
-        get_package_share_directory("robot_fingers"), "config", "fingeredu.yml"
+        get_package_share_directory("test_trifinger_build_workflows"), "config", "fingeredu.yml"
     )
 
     finger_data = robot_interfaces.finger.SingleProcessData()
-    backend = robot_fingers.create_real_finger_backend(
+    backend = test_trifinger_build_workflows.create_real_finger_backend(
         finger_data, config_file_path
     )
     finger = robot_interfaces.finger.Frontend(finger_data)

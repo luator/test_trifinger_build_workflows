@@ -4,9 +4,9 @@
  * @copyright Copyright (c) 2020, New York University & Max Planck Gesellschaft.
  */
 #include <gtest/gtest.h>
-#include <robot_fingers/n_joint_blmc_robot_driver.hpp>
+#include <test_trifinger_build_workflows/n_joint_blmc_robot_driver.hpp>
 
-using Driver = robot_fingers::SimpleNJointBlmcRobotDriver<2>;
+using Driver = test_trifinger_build_workflows::SimpleNJointBlmcRobotDriver<2>;
 
 TEST(TestNJointBlmcRobotDriverConfig, is_within_joint_limits)
 {

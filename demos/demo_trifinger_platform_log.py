@@ -4,7 +4,7 @@ import argparse
 
 import cv2
 
-import robot_fingers
+import test_trifinger_build_workflows
 from trifinger_cameras import utils
 
 
@@ -20,9 +20,9 @@ def main():
     args = parser.parse_args()
 
     if args.with_object:
-        Log = robot_fingers.TriFingerPlatformWithObjectLog
+        Log = test_trifinger_build_workflows.TriFingerPlatformWithObjectLog
     else:
-        Log = robot_fingers.TriFingerPlatformLog
+        Log = test_trifinger_build_workflows.TriFingerPlatformLog
 
     log = Log(args.robot_log, args.camera_log)
 

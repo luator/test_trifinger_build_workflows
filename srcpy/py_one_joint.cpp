@@ -16,11 +16,11 @@
  */
 #include <pybind11/pybind11.h>
 
-#include <robot_fingers/one_joint_driver.hpp>
+#include <test_trifinger_build_workflows/one_joint_driver.hpp>
 
 #include "generic_driver_bindings.hpp"
 
-using namespace robot_fingers;
+using namespace test_trifinger_build_workflows;
 
 PYBIND11_MODULE(py_one_joint, m)
 {

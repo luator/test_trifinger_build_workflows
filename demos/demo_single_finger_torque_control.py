@@ -5,7 +5,7 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def get_random_torque():
@@ -17,16 +17,16 @@ def get_random_torque():
 
 
 def demo_torque_control():
-    # Use the default configuration file from the robot_fingers package
+    # Use the default configuration file from the test_trifinger_build_workflows package
     config_file_path = os.path.join(
-        get_package_share_directory("robot_fingers"), "config", "finger.yml"
+        get_package_share_directory("test_trifinger_build_workflows"), "config", "finger.yml"
     )
 
     # Storage for all observations, actions, etc.
     robot_data = robot_interfaces.finger.SingleProcessData()
 
     # The backend takes care of communication with the robot hardware.
-    robot_backend = robot_fingers.create_real_finger_backend(
+    robot_backend = test_trifinger_build_workflows.create_real_finger_backend(
         robot_data, config_file_path
     )
 

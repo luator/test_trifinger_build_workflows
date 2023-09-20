@@ -13,8 +13,8 @@ import rclpy
 
 import robot_interfaces
 from trifinger_simulation import collision_objects
-import robot_fingers.pybullet_drivers as drivers
-from robot_fingers.ros import NotificationNode
+import test_trifinger_build_workflows.pybullet_drivers as drivers
+from test_trifinger_build_workflows.ros import NotificationNode
 
 
 def main():

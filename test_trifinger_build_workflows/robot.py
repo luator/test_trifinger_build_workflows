@@ -8,7 +8,7 @@ import yaml
 from ament_index_python.packages import get_package_share_directory
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 #: Default configurations for various robots.
@@ -21,57 +21,57 @@ import robot_fingers
 robot_configs = {
     "fingerone": (
         robot_interfaces.finger,
-        robot_fingers.create_real_finger_backend,
+        test_trifinger_build_workflows.create_real_finger_backend,
         "finger.yml",
     ),
     "trifingerone": (
         robot_interfaces.trifinger,
-        robot_fingers.create_trifinger_backend,
+        test_trifinger_build_workflows.create_trifinger_backend,
         "trifinger.yml",
     ),
     "fingeredu": (
         robot_interfaces.finger,
-        robot_fingers.create_real_finger_backend,
+        test_trifinger_build_workflows.create_real_finger_backend,
         "fingeredu.yml",
     ),
     "trifingeredu": (
         robot_interfaces.trifinger,
-        robot_fingers.create_trifinger_backend,
+        test_trifinger_build_workflows.create_trifinger_backend,
         "trifingeredu.yml",
     ),
     "fingerpro": (
         robot_interfaces.finger,
-        robot_fingers.create_real_finger_backend,
+        test_trifinger_build_workflows.create_real_finger_backend,
         "fingerpro.yml",
     ),
     "trifingerpro": (
         robot_interfaces.trifinger,
-        robot_fingers.create_trifinger_backend,
+        test_trifinger_build_workflows.create_trifinger_backend,
         "/etc/trifingerpro/trifingerpro.yml",
     ),
     "trifingerpro_default": (
         robot_interfaces.trifinger,
-        robot_fingers.create_trifinger_backend,
+        test_trifinger_build_workflows.create_trifinger_backend,
         "trifingerpro.yml",
     ),
     "trifingerpro_calib": (
         robot_interfaces.trifinger,
-        robot_fingers.create_trifinger_backend,
+        test_trifinger_build_workflows.create_trifinger_backend,
         "trifingerpro_for_calib.yml",
     ),
     "onejoint": (
         robot_interfaces.one_joint,
-        robot_fingers.create_one_joint_backend,
+        test_trifinger_build_workflows.create_one_joint_backend,
         "onejoint.yml",
     ),
     "twojoint": (
         robot_interfaces.two_joint,
-        robot_fingers.create_two_joint_backend,
+        test_trifinger_build_workflows.create_two_joint_backend,
         "twojoint.yml",
     ),
     "solo8": (
         robot_interfaces.solo_eight,
-        robot_fingers.create_solo_eight_backend,
+        test_trifinger_build_workflows.create_solo_eight_backend,
         "soloeight.yml",
     ),
 }
@@ -80,7 +80,7 @@ robot_configs = {
 def get_config_dir() -> pathlib.PurePath:
     """Get path to the configuration directory."""
     return pathlib.PurePath(
-        get_package_share_directory("robot_fingers"),
+        get_package_share_directory("test_trifinger_build_workflows"),
         "config",
     )
 
@@ -125,7 +125,7 @@ class Robot:
         :param create_backend_function: Function to create the robot backend.
         :param config: Either a config object or a path to a config file.
             In the latter case, paths need to be absolute or relative to the
-            config directory of the robot_fingers package.
+            config directory of the test_trifinger_build_workflows package.
         :param logger_buffer_size: Size of the buffer used by the logger.
             Default is 0.  Set this to at least the expected number of time
             steps when using the logger.

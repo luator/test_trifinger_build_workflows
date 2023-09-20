@@ -9,14 +9,14 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl_bind.h>
 
-#include <robot_fingers/trifinger_driver.hpp>
-#include <robot_fingers/trifinger_platform_frontend.hpp>
-#include <robot_fingers/trifinger_platform_log.hpp>
+#include <test_trifinger_build_workflows/trifinger_driver.hpp>
+#include <test_trifinger_build_workflows/trifinger_platform_frontend.hpp>
+#include <test_trifinger_build_workflows/trifinger_platform_log.hpp>
 
 #include "generic_driver_bindings.hpp"
 
 using namespace pybind11::literals;
-using namespace robot_fingers;
+using namespace test_trifinger_build_workflows;
 
 template <typename T>
 void pybind_trifinger_platform_frontend(pybind11::module &m,

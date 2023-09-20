@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include <robot_fingers/pybullet_driver.hpp>
+#include <test_trifinger_build_workflows/pybullet_driver.hpp>
 #include <robot_interfaces/finger_types.hpp>
 #include <robot_interfaces/robot_frontend.hpp>
 

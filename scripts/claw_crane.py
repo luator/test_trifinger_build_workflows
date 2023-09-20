@@ -11,8 +11,8 @@ from ament_index_python.packages import get_package_share_directory
 
 import trifinger_simulation
 
-import robot_fingers
-from robot_fingers.curses import SimpleCursesGUI
+import test_trifinger_build_workflows
+from test_trifinger_build_workflows.curses import SimpleCursesGUI
 
 
 def loop(win, args):
@@ -33,7 +33,7 @@ def loop(win, args):
         ["finger_tip_link_0", "finger_tip_link_120", "finger_tip_link_240"],
     )
 
-    robot = robot_fingers.Robot.create_by_name("trifingerpro")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro")
     robot.initialize()
 
     gui = SimpleCursesGUI(win, title, status_line)

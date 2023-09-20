@@ -14,19 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-// #include <robot_fingers/trifinger_driver.hpp>
+// #include <test_trifinger_build_workflows/trifinger_driver.hpp>
 
 #include <pybind11/eigen.h>
 #include <pybind11/embed.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl_bind.h>
 
-#include <robot_fingers/solo_eight_driver.hpp>
+#include <test_trifinger_build_workflows/solo_eight_driver.hpp>
 
 #include "generic_driver_bindings.hpp"
 
 using namespace pybind11::literals;
-using namespace robot_fingers;
+using namespace test_trifinger_build_workflows;
 
 PYBIND11_MODULE(py_solo_eight, m)
 {

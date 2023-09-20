@@ -17,7 +17,7 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 
 from robot_interfaces import one_joint
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 N_JOINTS = 1
@@ -186,15 +186,15 @@ def main():
 
     # load the default config file
     config_file_path = os.path.join(
-        get_package_share_directory("robot_fingers"),
+        get_package_share_directory("test_trifinger_build_workflows"),
         "config",
         "onejoint_friction_calibration.yml",
     )
 
-    config = robot_fingers.OneJointConfig.load_config(config_file_path)
+    config = test_trifinger_build_workflows.OneJointConfig.load_config(config_file_path)
     config.can_ports = [args.canport]
     robot_data = one_joint.SingleProcessData()
-    robot_backend = robot_fingers.create_one_joint_backend(robot_data, config)
+    robot_backend = test_trifinger_build_workflows.create_one_joint_backend(robot_data, config)
     robot_frontend = one_joint.Frontend(robot_data)
 
     robot_backend.initialize()

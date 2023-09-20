@@ -8,7 +8,7 @@ import argparse
 import numpy as np
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def run_choreography(frontend):
@@ -22,7 +22,7 @@ def run_choreography(frontend):
             )
             frontend.wait_until_timeindex(t)
 
-    time_printer = robot_fingers.utils.TimePrinter()
+    time_printer = test_trifinger_build_workflows.utils.TimePrinter()
 
     t = 0
     offset = np.random.uniform(-0.1, 0.1, size=8)
@@ -56,9 +56,9 @@ def main():
     else:
         # In single-process case run both frontend and backend in this process
         # (using the `Robot` helper class).
-        robot = robot_fingers.Robot(
+        robot = test_trifinger_build_workflows.Robot(
             robot_interfaces.solo_eight,
-            robot_fingers.create_solo_eight_backend,
+            test_trifinger_build_workflows.create_solo_eight_backend,
             "soloeight.yml",
         )
         robot.initialize()

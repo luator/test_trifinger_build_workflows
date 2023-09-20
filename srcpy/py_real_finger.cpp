@@ -16,12 +16,12 @@
  */
 #include <pybind11/pybind11.h>
 
-#include <robot_fingers/fake_finger_driver.hpp>
-#include <robot_fingers/real_finger_driver.hpp>
+#include <test_trifinger_build_workflows/fake_finger_driver.hpp>
+#include <test_trifinger_build_workflows/real_finger_driver.hpp>
 
 #include "generic_driver_bindings.hpp"
 
-using namespace robot_fingers;
+using namespace test_trifinger_build_workflows;
 
 PYBIND11_MODULE(py_real_finger, m)
 {

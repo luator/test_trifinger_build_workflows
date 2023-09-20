@@ -10,7 +10,7 @@ import sys
 import rclpy
 
 import robot_interfaces
-from robot_fingers.ros import NotificationNode
+from test_trifinger_build_workflows.ros import NotificationNode
 
 
 # make sure camera time series covers at least one second

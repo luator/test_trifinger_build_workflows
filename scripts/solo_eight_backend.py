@@ -9,7 +9,7 @@ import sys
 from ament_index_python.packages import get_package_share_directory
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
@@ -60,7 +60,7 @@ def main():
 
     # Use robot-dependent config file
     config_file_path = os.path.join(
-        get_package_share_directory("robot_fingers"), "config", "soloeight.yml"
+        get_package_share_directory("test_trifinger_build_workflows"), "config", "soloeight.yml"
     )
 
     # Storage for all observations, actions, etc.
@@ -74,7 +74,7 @@ def main():
 
     # The backend sends actions from the data to the robot and writes
     # observations from the robot to the data.
-    backend = robot_fingers.create_solo_eight_backend(
+    backend = test_trifinger_build_workflows.create_solo_eight_backend(
         robot_data,
         config_file_path,
         first_action_timeout=args.first_action_timeout,

@@ -1,6 +1,8 @@
 /**
  * \file
- * \brief The hardware wrapper of the real TriFinger robot.
+ * \brief The hardware wrapper of the real Finger robot.
+ * \author Manuel Wuthrich
+ * \date 2018
  * \copyright Copyright (c) 2019, New York University and Max Planck
  *            Gesellschaft.
  */
@@ -9,13 +11,13 @@
 
 #include "n_finger_driver.hpp"
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
-class TriFingerDriver : public NFingerDriver<3>
+class RealFingerDriver : public NFingerDriver<1>
 {
 public:
-    TriFingerDriver(const Config &config)
-        : TriFingerDriver(create_motor_boards(config.can_ports), config)
+    RealFingerDriver(const Config &config)
+        : RealFingerDriver(create_motor_boards(config.can_ports), config)
     {
     }
 
@@ -25,8 +27,8 @@ private:
 // the warning until then).
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wpedantic"
-    TriFingerDriver(const MotorBoards &motor_boards, const Config &config)
-        : NFingerDriver<3>(motor_boards,
+    RealFingerDriver(const MotorBoards &motor_boards, const Config &config)
+        : NFingerDriver<1>(motor_boards,
                            create_motors(motor_boards),
                            {
                                // MotorParameters
@@ -40,24 +42,14 @@ private:
 
     static Motors create_motors(const MotorBoards &motor_boards)
     {
+        // set up motors
         Motors motors;
-
-        // there are three fingers
-        // each finger has three motors and two boards
         motors[0] = std::make_shared<blmc_drivers::Motor>(motor_boards[1], 0);
         motors[1] = std::make_shared<blmc_drivers::Motor>(motor_boards[0], 0);
         motors[2] = std::make_shared<blmc_drivers::Motor>(motor_boards[0], 1);
-
-        motors[3] = std::make_shared<blmc_drivers::Motor>(motor_boards[3], 0);
-        motors[4] = std::make_shared<blmc_drivers::Motor>(motor_boards[2], 0);
-        motors[5] = std::make_shared<blmc_drivers::Motor>(motor_boards[2], 1);
-
-        motors[6] = std::make_shared<blmc_drivers::Motor>(motor_boards[5], 0);
-        motors[7] = std::make_shared<blmc_drivers::Motor>(motor_boards[4], 0);
-        motors[8] = std::make_shared<blmc_drivers::Motor>(motor_boards[4], 1);
 
         return motors;
     }
 };
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

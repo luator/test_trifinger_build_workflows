@@ -11,7 +11,7 @@
 #include <trifinger_cameras/tricamera_observation.hpp>
 #include <trifinger_object_tracking/tricamera_object_observation.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 /**
  * @brief Combined frontend for the TriFinger Platform
@@ -241,4 +241,4 @@ typedef T_TriFingerPlatformFrontend<
     TriFingerPlatformWithObjectFrontend;
 typedef T_TriFingerPlatformFrontend<trifinger_cameras::TriCameraObservation>
     TriFingerPlatformFrontend;
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

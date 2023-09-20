@@ -11,7 +11,7 @@ import sys
 import typing
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 # Frame rate of the cameras
@@ -212,7 +212,7 @@ def main() -> int:
 
     # The backend sends actions from the data to the robot and writes
     # observations from the robot to the data.
-    backend = robot_fingers.create_trifinger_backend(
+    backend = test_trifinger_build_workflows.create_trifinger_backend(
         robot_data,
         os.fspath(config_file_path),
         first_action_timeout=args.first_action_timeout,

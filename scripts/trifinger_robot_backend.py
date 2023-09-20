@@ -12,9 +12,9 @@ import sys
 import rclpy
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
-from robot_fingers.ros import NotificationNode
+from test_trifinger_build_workflows.ros import NotificationNode
 
 
 def main():
@@ -110,7 +110,7 @@ def main():
 
     # The backend sends actions from the data to the robot and writes
     # observations from the robot to the data.
-    backend = robot_fingers.create_trifinger_backend(
+    backend = test_trifinger_build_workflows.create_trifinger_backend(
         robot_data,
         config_file_path,
         first_action_timeout=args.first_action_timeout,

@@ -19,7 +19,7 @@ from ament_index_python.packages import get_package_share_directory
 import trifinger_simulation.finger_types_data
 import trifinger_simulation.pinocchio_utils
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def init_kinematics():
@@ -49,7 +49,7 @@ def main():
     args = argparser.parse_args()
 
     if args.single_process:
-        robot = robot_fingers.Robot.create_by_name("trifingerpro")
+        robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro")
         robot.initialize()
         frontend = robot.frontend
     else:

@@ -5,7 +5,7 @@
  *            Gesellschaft.
  */
 #include <gtest/gtest.h>
-#include <robot_fingers/n_joint_blmc_robot_driver.hpp>
+#include <test_trifinger_build_workflows/n_joint_blmc_robot_driver.hpp>
 #include <robot_interfaces/n_joint_robot_types.hpp>
 
 /**
@@ -15,7 +15,7 @@ class TestProcessDesiredAction : public ::testing::Test
 {
 protected:
     using Types = robot_interfaces::SimpleNJointRobotTypes<2>;
-    using Driver = robot_fingers::SimpleNJointBlmcRobotDriver<2>;
+    using Driver = test_trifinger_build_workflows::SimpleNJointBlmcRobotDriver<2>;
     using Vector = Types::Action::Vector;
 
     Types::Observation observation;

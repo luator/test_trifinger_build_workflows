@@ -22,9 +22,9 @@
 #include <yaml_utils/yaml_eigen.hpp>
 
 #include <blmc_drivers/blmc_joint_module.hpp>
-#include <robot_fingers/clamp.hpp>
+#include <test_trifinger_build_workflows/clamp.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 /**
  * @brief Parameters related to the motor.
@@ -693,6 +693,6 @@ typename Driver::Types::BackendPtr create_backend(
         robot_data, config, first_action_timeout, max_number_of_actions);
 }
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows
 
 #include "n_joint_blmc_robot_driver.hxx"

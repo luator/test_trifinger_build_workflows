@@ -6,10 +6,10 @@
  */
 #pragma once
 
-#include <robot_fingers/n_joint_blmc_robot_driver.hpp>
+#include <test_trifinger_build_workflows/n_joint_blmc_robot_driver.hpp>
 #include <robot_interfaces/finger_types.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 // alias for the base class, so all template arguments only need to be listed
 // once
@@ -73,4 +73,4 @@ public:
     }
 };
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

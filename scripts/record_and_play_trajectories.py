@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Record data while the user is manually moving the robot."""
 import numpy as np
-import robot_fingers
+import test_trifinger_build_workflows
 import typing
 
 
@@ -28,7 +28,7 @@ def play(trajectory: typing.List[np.ndarray], factor: int):
 
 
 if __name__ == "__main__":
-    robot = robot_fingers.Robot.create_by_name("trifingerpro")
+    robot = test_trifinger_build_workflows.Robot.create_by_name("trifingerpro")
     robot.initialize()
 
     trajectory: typing.List[np.ndarray] = []

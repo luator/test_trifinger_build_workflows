@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>robot_fingers</name>
+  <name>test_trifinger_build_workflows</name>
   <version>1.0.0</version>
   <description>
       Drivers, examples and basic scripts for the Finger robots.
@@ -10,8 +10,8 @@
 
   <license>BSD</license>
 
-  <url type="website">https://open-dynamic-robot-initiative.github.io/robot_fingers</url>
-  <url type="repository">https://github.com/open-dynamic-robot-initiative/robot_fingers</url>
+  <url type="website">https://open-dynamic-robot-initiative.github.io/test_trifinger_build_workflows</url>
+  <url type="repository">https://github.com/open-dynamic-robot-initiative/test_trifinger_build_workflows</url>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

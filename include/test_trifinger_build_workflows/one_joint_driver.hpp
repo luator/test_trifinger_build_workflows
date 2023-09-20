@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include <robot_fingers/n_joint_blmc_robot_driver.hpp>
+#include <test_trifinger_build_workflows/n_joint_blmc_robot_driver.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 /**
  * @brief Driver for a single joint.
@@ -53,4 +53,4 @@ private:
     }
 };
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

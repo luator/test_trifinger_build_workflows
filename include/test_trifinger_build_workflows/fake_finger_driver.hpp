@@ -5,10 +5,10 @@
 
 #include <Eigen/Eigen>
 
-#include <robot_fingers/n_joint_blmc_robot_driver.hpp>
+#include <test_trifinger_build_workflows/n_joint_blmc_robot_driver.hpp>
 #include <robot_interfaces/finger_types.hpp>
 
-namespace robot_fingers
+namespace test_trifinger_build_workflows
 {
 // TODO rename to include "Mono"
 class FakeFingerDriver : public robot_interfaces::RobotDriver<
@@ -86,4 +86,4 @@ robot_interfaces::MonoFingerTypes::BackendPtr create_fake_finger_backend(
     return backend;
 }
 
-}  // namespace robot_fingers
+}  // namespace test_trifinger_build_workflows

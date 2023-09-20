@@ -3,34 +3,34 @@
 import argparse
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
     robot_type = {
         "fingerone": (
             robot_interfaces.finger,
-            robot_fingers.create_real_finger_backend,
+            test_trifinger_build_workflows.create_real_finger_backend,
             "finger.yml",
         ),
         "trifingerone": (
             robot_interfaces.trifinger,
-            robot_fingers.create_trifinger_backend,
+            test_trifinger_build_workflows.create_trifinger_backend,
             "trifinger.yml",
         ),
         "fingeredu": (
             robot_interfaces.finger,
-            robot_fingers.create_real_finger_backend,
+            test_trifinger_build_workflows.create_real_finger_backend,
             "fingeredu.yml",
         ),
         "trifingeredu": (
             robot_interfaces.trifinger,
-            robot_fingers.create_trifinger_backend,
+            test_trifinger_build_workflows.create_trifinger_backend,
             "trifingeredu.yml",
         ),
         "trifingerpro": (
             robot_interfaces.trifinger,
-            robot_fingers.create_trifinger_backend,
+            test_trifinger_build_workflows.create_trifinger_backend,
             "trifingerpro.yml",
         ),
     }
@@ -39,7 +39,7 @@ def main():
     parser.add_argument("robot_type", choices=robot_type.keys())
     args = parser.parse_args()
 
-    robot = robot_fingers.Robot(*robot_type[args.robot_type])
+    robot = test_trifinger_build_workflows.Robot(*robot_type[args.robot_type])
 
     print("")
     print("")

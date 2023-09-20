@@ -5,7 +5,7 @@ import json
 import pathlib
 import sys
 
-import robot_fingers
+import test_trifinger_build_workflows
 from trifinger_cameras.utils import convert_image
 from trifinger_object_tracking.py_lightblue_segmenter import segment_image
 from trifinger_simulation.camera import load_camera_parameters
@@ -111,11 +111,11 @@ def main():
         camera_log = str(args.log_dir / "camera_data.dat")
 
         if args.task in ("move_cube", "move_cube_on_trajectory"):
-            log = robot_fingers.TriFingerPlatformWithObjectLog(
+            log = test_trifinger_build_workflows.TriFingerPlatformWithObjectLog(
                 robot_log, camera_log
             )
         else:
-            log = robot_fingers.TriFingerPlatformLog(robot_log, camera_log)
+            log = test_trifinger_build_workflows.TriFingerPlatformLog(robot_log, camera_log)
     except Exception as e:
         print("Failed to load logs:", e)
         sys.exit(1)

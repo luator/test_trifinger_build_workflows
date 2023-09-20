@@ -1,7 +1,7 @@
 #include <opencv2/highgui.hpp>
-#include <robot_fingers/trifinger_platform_frontend.hpp>
+#include <test_trifinger_build_workflows/trifinger_platform_frontend.hpp>
 
-using namespace robot_fingers;
+using namespace test_trifinger_build_workflows;
 
 int main()
 {

@@ -19,7 +19,7 @@ robot_interfaces <robot_interfaces:doc/real_time>`
 Get the Source
 --------------
 
-**robot_fingers** depends on several other of our packages which are
+**test_trifinger_build_workflows** depends on several other of our packages which are
 organized in separate repositories.  We therefore use a workspace management
 tool called treep_ which allows easy cloning of multi-repository projects.
 
@@ -123,7 +123,7 @@ workspace (this needs to be done every time you open a new terminal)::
 As a first test, you can run the "fake robot" demo (which doesn't need an actual
 robot to be connected)::
 
-    ros2 run robot_fingers demo_fake_finger
+    ros2 run test_trifinger_build_workflows demo_fake_finger
 
 It should produce output like this::
 

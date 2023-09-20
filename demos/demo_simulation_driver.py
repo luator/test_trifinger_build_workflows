@@ -10,7 +10,7 @@ import argparse
 import numpy as np
 
 import robot_interfaces
-import robot_fingers.pybullet_drivers
+import test_trifinger_build_workflows.pybullet_drivers
 from trifinger_simulation import finger_types_data
 
 
@@ -47,12 +47,12 @@ def main():
     if num_fingers == 1:
         finger_types = robot_interfaces.finger
         create_backend = (
-            robot_fingers.pybullet_drivers.create_single_finger_backend
+            test_trifinger_build_workflows.pybullet_drivers.create_single_finger_backend
         )
     elif num_fingers == 3:
         finger_types = robot_interfaces.trifinger
         create_backend = (
-            robot_fingers.pybullet_drivers.create_trifinger_backend
+            test_trifinger_build_workflows.pybullet_drivers.create_trifinger_backend
         )
 
     robot_data = finger_types.SingleProcessData()

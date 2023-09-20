@@ -9,13 +9,13 @@ import numpy as np
 from ament_index_python.packages import get_package_share_directory
 
 import robot_interfaces
-import robot_fingers
+import test_trifinger_build_workflows
 
 
 def main():
     # load the default config file
     config_file_path = os.path.join(
-        get_package_share_directory("robot_fingers"), "config", "finger.yml"
+        get_package_share_directory("test_trifinger_build_workflows"), "config", "finger.yml"
     )
 
     # Storage for all observations, actions, etc.
@@ -23,7 +23,7 @@ def main():
 
     # The backend sends actions from the data to the robot and writes
     # observations from the robot to the data.
-    real_finger_backend = robot_fingers.create_real_finger_backend(
+    real_finger_backend = test_trifinger_build_workflows.create_real_finger_backend(
         finger_data, config_file_path
     )
 
