@@ -1,6 +1,3 @@
-.. image:: doc/images/trifingerpro_with_cube.jpg
-   :align: center
-
 **This package is only for testing GitHub build workflows.  It is not supposed
 to be used!  Please ignore it :)**
 

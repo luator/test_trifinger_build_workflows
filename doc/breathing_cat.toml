@@ -2,7 +2,7 @@
 robot_interfaces = "https://open-dynamic-robot-initiative.github.io/robot_interfaces"
 
 [mainpage]
-title = "test_trifinger_build_workflows: (Tri-)Finger Robot Driver and Tools"
+title = "This is just a test!"
 auto_general_docs = false
 
 [html]
