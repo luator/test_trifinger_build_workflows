@@ -1,15 +1,11 @@
 .. image:: doc/images/trifingerpro_with_cube.jpg
    :align: center
 
-The ``test_trifinger_build_workflows`` package provides drivers, examples and basic scripts for
-using the (Tri)Finger robots with our :doc:`robot_interfaces
-<robot_interfaces:index>` package.
+**This package is only for testing GitHub build workflows.  It is not supposed
+to be used!  Please ignore it :)**
 
-The source code is hosted on GitHub_.  Please also use the `Bug Tracker`_ there
-if you have a question or want to report a bug.
+Last rebuild of this documentation: |today|
 
-For more information, on the TriFinger robot and the general architecture of the
-software, see also our paper_ on the open-source version of the TriFinger robot.
 
 .. toctree::
    :caption: General Documentation
