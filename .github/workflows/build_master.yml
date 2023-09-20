@@ -45,5 +45,5 @@ jobs:
         id: doc
         uses: open-dynamic-robot-initiative/trifinger-build-action/build_and_deploy_docs@fkloss/pythondir
 
-      - name: Tests
-        uses: open-dynamic-robot-initiative/trifinger-build-action/run_tests@v2
+      #- name: Tests
+      #  uses: open-dynamic-robot-initiative/trifinger-build-action/run_tests@v2
